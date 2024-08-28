@@ -5,6 +5,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400..900&display=swap');
+
+
+
 * {
   padding: 0;
   margin: 0;
@@ -14,6 +18,18 @@ body {
   background-color: black;
 }
 
+.raleway-font {
+  font-family: "Raleway";
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 #hero-section::before {
   content: "";
@@ -26,12 +42,6 @@ body {
   z-index: 1;
 }
 
-.raleway-font {
-  font-family: "Raleway";
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-}
 
 #wedding{
   background-image: linear-gradient(to bottom , transparent 5% , rgb(40, 2, 69),rgb(21, 0, 45) , transparent);
@@ -54,6 +64,17 @@ body {
 }
 
 #cenematic-shot #videos{
-  background-image: linear-gradient(to bottom , transparent 5% , rgb(2, 0, 27) , transparent);
+  /* background-image: linear-gradient(to bottom , transparent 5% , rgb(2, 0, 27) , transparent); */
 }
 
+#cenematic-shot #videos .video::before{
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  background-image: linear-gradient(74deg , rgb(4, 7, 52) , rgb(31, 3, 48) , rgb(51, 8, 42));
+  filter: blur(80px);
+  z-index: -1;
+}
