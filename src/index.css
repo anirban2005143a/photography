@@ -3,32 +3,34 @@
 @tailwind utilities;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400..900&display=swap');
-
-
-
 * {
   padding: 0;
   margin: 0;
 }
 
+.dosis-font {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.dancing-script-font {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.playfair-display-font {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
 body {
   background-color: black;
-}
-
-.raleway-font {
-  font-family: "Raleway";
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.abril-fatface-regular {
-  font-family: "Abril Fatface", serif;
-  font-weight: 400;
-  font-style: normal;
+  scroll-behavior: smooth;
 }
 
 #hero-section::before {
@@ -41,14 +43,24 @@ body {
   background-color: rgba(0, 0, 0, 0.306);
   z-index: 1;
 }
+/* 
+#master-piece::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+} */
 
-
-#wedding{
-  background-image: linear-gradient(to bottom , transparent 5% , rgb(40, 2, 69),rgb(21, 0, 45) , transparent);
+#master-piece img{
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: all 300ms ease-in-out;
 }
+#master-piece img:hover{
+  filter: grayscale(0%);
+}
+
 #cenematic-shot .title p{
-  background-image: linear-gradient(45deg, aqua, #952bff, #ff669e, #952bff, aqua);
-  background-size: 80%;
+  background-image: linear-gradient(to bottom , blue , #ff669e , rgba(0, 0, 0, 0));
+  background-size: 100% 150%;
   background-position: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,10 +73,6 @@ body {
   border-radius: 50%;
   box-shadow:  0 -30px 20px rgb(60, 9, 142);
   z-index: -1;
-}
-
-#cenematic-shot #videos{
-  /* background-image: linear-gradient(to bottom , transparent 5% , rgb(2, 0, 27) , transparent); */
 }
 
 #cenematic-shot #videos .video::before{
