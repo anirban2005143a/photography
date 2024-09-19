@@ -1,37 +1,31 @@
 import React from 'react'
+import '../../index.css'
 
 const MasterPiece = () => {
     return (
-        <div id='master-piece' className='w-full overflow-auto py-16'>
-            <div className="slider flex w-[200%] items-center">
-                <div className='imgCollection1 flex justify-center items-center mx-24'>
-                    <div className="img1 max-w-[300px]  translate-y-10  relative border-2 border-separate border-[#E5D9F2]">
-                        <img src="/a/alex-shuper-5DU0Wlm41Zw-unsplash.jpg" alt="" className='hover:scale-105 transition-all ease-linear relative p-1 bg-black w-full ' />
+        <div id='master-piece' className='w-full overflow-auto py-16 bg-[#e0e5e5]'>
+            <div className="title   text-center  text-[#000000]">
+                <span className='border-b-[1px] border-black font-semibold text-5xl uppercase cormorant-garamond-font'>masterpiece</span> 
+                <p className=' md:w-7/12 sm:w-9/12 w-11/12 mx-auto dancing-script-font my-6 text-lg'>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ullam nemo deserunt iusto fugit totam suscipit harum debitis minus sit cupiditate corporis laborum consequuntur veniam assumenda! Tempore est quo nesciunt!"</p>
+            </div>
+            <div className="gallery max-w-[650px] mx-auto translate-x-3 px-3">
+                <div className="row1 w-full flex justify-center items-end ">
+                    <div className="col1 img translate-y-6 z-20">
+                        <img src="/public/a/boliviainteligente-2XVqBh3sXgY-unsplash.jpg" alt="" className='' />
                     </div>
-                    <div className="img2 max-w-[350px]  -translate-y-8 -translate-x-7 relative border-2 border-separate border-[#FF8A8A]">
-                        <img src="/public/a/pxfuel (4).jpg" alt="" className='hover:scale-105 transition-all ease-linear relative p-1 bg-black w-full ' />
+                    <div className="col2 imgbw  p-1">
+                        <img src="/public/a/colin-watts-_rt4VIG9rDQ-unsplash.jpg" alt="" className='' />
                     </div>
                 </div>
-                <div className="video max-w-[600px] border-2 border-separate border-[#c7f69c] relative">
-                    <video src="/1.mp4" className=' relative p-4 bg-black' autoPlay={true} loop controls={false}></video>
-                </div>
-                <div className="imgCollection2 flex items-center mx-36">
-                    <div className=' col'>
-                        <div className="img relative max-w-[300px] border-2 border-separate border-[#91DDCF] m-2 -rotate-[10deg] translate-y-5 -translate-x-8">
-                            <img src="/public/a/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg" alt="" className='hover:scale-105 transition-all ease-linear bg-black p-2 relative z-10 w-full' />
-                        </div>
-                        <div className="img relative max-w-[300px] border-2 border-separate border-[#F7F9F2] m-2 translate-x-5 z-10">
-                            <img src="/public/a/erik-karits-dfu_dcXT6FM-unsplash - Copy.jpg" alt="" className='hover:scale-105 transition-all ease-linear bg-black p-2 relative z-10 w-full' />
-                        </div>
+                <div className="row2 w-full flex justify-center items-start -translate-x-5 ">
+                    <div className="col1 imgbw z-10">
+                        <img src="/public/a/alex-shuper-5DU0Wlm41Zw-unsplash.jpg" alt="" className='' />
                     </div>
-                    <div className=' col'>
-                        <div className="img relative max-w-[300px] border-2 border-separate border-[#E8C5E5]  rotate-[8deg] -translate-x-3 z-0">
-                            <img src="/public/a/arthur-arias-QAZCk9QzOrU-unsplash.jpg" alt="" className='hover:scale-105 transition-all ease-linear bg-black p-2 relative z-10 w-full' />
-                        </div>
+                    <div className="col2 img -translate-y-6 p-1">
+                        <img src="/public/a/birhat-jiyad-OMGORs5og5M-unsplash.jpg" alt="" className='' />
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

@@ -1,68 +1,38 @@
-import React , {useEffect , useState} from 'react'
+import React, { useEffect, useState } from 'react'
+import herobg from '/wedding.jpeg'
 import '../../index.css'
 
 const HeroSection = () => {
 
     const [isSelected, setisSelected] = useState(true)
 
-    const animate = () => {
-        const btns = Array.from(document.querySelectorAll(".BTN"))
-        const slides = Array.from(document.querySelectorAll(".slide"))
 
-        slides && btns ? (() => {
-            btns.forEach((btn, index) => {
-                btn.addEventListener("click", () => {
-                    btns.forEach((item, ind) => {
-                        ind != index ? (() => {
-                            item.classList.remove("bg-white")
-                            item.classList.add("bg-black")
-                        })() : (() => {
-                            item.classList.add("bg-white")
-                            item.classList.remove("bg-black")
-                        })()
-                    })
-                    slides.forEach((slide, i) => {
-                        i != index ? (() => {
-                            slide.classList.remove("h-full")
-                            slide.classList.add("h-0")
-                        })() : ""
-                    })
-                    slides[index].classList.add("h-full")
-                    slides[index].classList.remove("h-0")
-                })
-            })
-        })() : ""
+    const changeopacity = ()=>{
+        const bgimg = document.querySelector("#hero-section .bgImg img")
+
+        setTimeout(() => {
+             bgimg ?
+            (() => {
+                bgimg.classList.remove("opacity-0")
+                bgimg.classList.add("opacity-100")
+            })() : ""
+        }, 10);
     }
 
     useEffect(() => {
-        animate()
+        changeopacity()
     }, [])
 
     return (
-        <section id='hero-section' className='z-0 relative overflow-hidden pb-4' style={{ height: `${window.innerHeight -20}px` }}>
-            <div className='bg-slate-600 relative slides' >
-                <div className="slide transition-all duration-1000 ease-in-out w-full h-full"><img className=' w-full h-full object-cover hover:scale-110 transition-all duration-[2000ms] ease-linear' src="/bg.jpeg" alt="" /></div>
-                <div className="slide transition-all duration-1000 ease-in-out w-full h-0"><img className=' w-full h-full object-cover hover:scale-110 transition-all duration-[2000ms] ease-linear' src="/bg1.jpeg" alt="" /></div>
-                <div className="slide transition-all duration-1000 ease-in-out w-full h-0"><img className=' w-full h-full object-cover hover:scale-110 transition-all duration-[2000ms] ease-linear' src="/bg2.avif" alt="" /></div>
-                <div className="slide transition-all duration-1000 ease-in-out w-full h-0"><img className=' w-full h-full object-cover hover:scale-110 transition-all duration-[2000ms] ease-linear' src="/bg3.jpg" alt="" /></div>
-                <div className="slide transition-all duration-1000 ease-in-out w-full h-0"><img className=' w-full h-full object-cover hover:scale-110 transition-all duration-[2000ms] ease-linear' src="/bg4.webp" alt="" /></div>
+        <section id='hero-section' className='z-0 relative overflow-hidden w-full' style={{ height: `${window.innerHeight}px` }}>
+            <div className={`bgImg relative slides w-full overflow-hidden  h-full`}>
+                <img src="/wedding.jpeg" alt="" className='md:w-full md:h-auto h-full opacity-0 object-cover ' />
             </div>
-            <div className="waves absolute bottom-0 z-10 w-full ">
-                <div className=' relative'>
-                    <img src="/wave-haikei (2).png" className=' w-full object-cover' alt="" />
-                </div>
-            </div>
-            <div className="dots z-20 absolute bottom-0 flex gap-4 justify-center items-center w-full pb-4">
-                <div className={`BTN transition-all duration-300 ease-linear rounded-full border-[1px] border-white bg-white cursor-pointer w-4 h-4`}></div>
-                <div className={`BTN transition-all duration-300 ease-linear rounded-full border-[1px] border-white bg-black cursor-pointer w-4 h-4`}></div>
-                <div className={`BTN transition-all duration-300 ease-linear rounded-full border-[1px] border-white bg-black cursor-pointer w-4 h-4`}></div>
-                <div className={`BTN transition-all duration-300 ease-linear rounded-full border-[1px] border-white bg-black cursor-pointer w-4 h-4`}></div>
-                <div className={`BTN transition-all duration-300 ease-linear rounded-full border-[1px] border-white bg-black cursor-pointer w-4 h-4`}></div>
-            </div>
+           
             <div className="heading  z-10 text-white absolute w-full h-full font-thin top-0 left-0">
-                <div className=' w-full h-full flex flex-col items-start justify-center px-10'>
-                    <div className="title uppercase text-6xl my-6 dosis-font">photography</div>
-                    <div className="content text-xl w-8/12 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dignissimos dolorem voluptate hic, aut maxime nisi </div>
+                <div className=' w-full h-full flex flex-col items-center justify-end pb-20'>
+                    <div className="title uppercase text-5xl my-4 dosis-font font-light">photography</div>
+                    <div className="content text-lg md:w-5/12 sm:w-7/12 w-11/12 font-light dancing-script-font text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dignissimos dolorem voluptate hic, aut maxime nisi </div>
                 </div>
             </div>
         </section>
