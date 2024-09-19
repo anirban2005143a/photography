@@ -6,13 +6,33 @@ import Navbar from './navbar'
 
 const home = () => {
 
-    const [isWeddingVisible, setisWeddingVisible] = useState(true)
+    const [isWeddingVisible, setisWeddingVisible] = useState(false)
+
+    const changeOpacity = () => {
+        const masterPiece = document.querySelector("#homePage #master-piece")
+        const wedding = document.querySelector("#homePage #wedding")
+
+        masterPiece && wedding ? (() => {
+
+            const h1 = masterPiece.clientHeight
+            const h2 = wedding.clientHeight
+            window.scrollY >= (h1 + 20) ? setisWeddingVisible(true) : setisWeddingVisible(false)
+        })() : ""
+    }
+
+    useEffect(() => {
+        changeOpacity()
+    }, [])
+
+    window.addEventListener('scroll' , ()=>{
+        changeOpacity()
+    })
 
 
     return (
         <>
             <div id='homePage' className=' '>
-                <Navbar/>
+                <Navbar />
                 <HeroSection />
                 <MasterPiece />
 

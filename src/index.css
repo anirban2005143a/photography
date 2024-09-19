@@ -60,7 +60,7 @@ body {
   /* cursor: pointer; */
   filter: grayscale(100%);
   transition: all;
-  transition-duration: 300ms;
+  transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
 #master-piece .imgbw img:hover{
