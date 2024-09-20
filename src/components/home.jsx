@@ -3,6 +3,7 @@ import Wedding from './utiles/wedding'
 import HeroSection from './utiles/HeroSection'
 import MasterPiece from './utiles/marterPiece'
 import Navbar from './navbar'
+import WeddingStory from './utiles/WeddingStory'
 
 const home = () => {
 
@@ -43,9 +44,8 @@ const home = () => {
                 <Navbar />
                 <HeroSection />
                 <MasterPiece masterPiece={masterPiece} />
-
                 <Wedding isWeddingVisible={isWeddingVisible} weddingPart2={weddingPart2} />
-
+                <WeddingStory/>
 
                 {/* {isWeddingVisible && <section id='cenematic-shot' className='my-32 relative'>
                     <div className="title w-10/12 mx-auto  text-center">

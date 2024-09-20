@@ -11,12 +11,12 @@ const Wedding = (props) => {
                     <p className={`${props.isWeddingVisible ? " opacity-100 translate-x-0 " : " opacity-0 -translate-x-24 "} transition-all duration-[1200ms] ease-in-outtext-xl dancing-script-font md:text-start text-center font-extrabold`}>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe totam vero animi rerum molestias tenetur reprehenderit. Odit consectetur sapiente, quisquam quod rerum atque in aliquid magnam veniam iste ea natus?"</p>
                 </div>
                 <div className={`img ${props.isWeddingVisible ? " opacity-100 md:translate-y-0 translate-x-0 " : " opacity-0 md:-translate-y-36 md:translate-x-0 translate-x-36 "} transition-all duration-[1200ms] ease-in-out md:w-5/12 sm:w-8/12 w-full my-6`}>
-                    <img src="/wedding7.jpeg" className=' bg-[#A1D6B2] w-full mx-auto ' alt="" />
+                    <img src="/wedding7.jpeg" className=' bg-[#A1D6B2] w-full mx-auto ' alt="" style={{aspectRatio:"1/1"}} />
                 </div>
             </div>
             <div className="part2 flex md:flex-row flex-col-reverse items-center justify-between md:p-4 p-2 ">
                 <div className={`img ${props.weddingPart2 ? " opacity-100 translate-x-0 " : " opacity-0 -translate-x-24 "} transition-all duration-[1000ms] ease-in-out md:w-7/12 sm:w-9/12 w-full md:mx-6 sm:mx-3 mx-0 my-3`}>
-                    <img src="/wedding3.jpeg" className=' w-full object-cover' alt="" />
+                    <img src="/wedding3.jpeg" className=' w-full object-cover' alt="" style={{aspectRatio:"5/3"}}/>
                 </div>
                 <div className="text font-extrabold  md:w-5/12 w-full text-center flex flex-col items-center justify-center my-4">
                     <p className={`${props.weddingPart2 ? " opacity-100 translate-x-0 " : " opacity-0 translate-x-24 "} transition-all duration-[700ms] delay-300 ease-in-out dancing-script-font text-xl`}>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus tempore consectetur pariatur doloribus, aliquam eaque eligendi accusamus a ab "</p>

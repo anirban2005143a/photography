@@ -45,8 +45,6 @@ const HeroSection = () => {
         changeopacity()
     }, [])
 
-    console.log(slideNo)
-
     return (
         <section id='hero-section' className='z-0 relative overflow-hidden w-full' style={{ height: `${window.innerHeight}px` }}>
             <div className={`bgImg relative overflow-hidden w-full h-full opacity-0`}>
