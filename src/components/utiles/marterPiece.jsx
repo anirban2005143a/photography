@@ -1,31 +1,9 @@
-import React , {useState , useEffect} from 'react'
+import React from 'react'
 import '../../index.css'
 
 const MasterPiece = (props) => {
 
-    const [masterPiece, setmasterPiece] = useState(false)
 
-
-    const animateMaterPiece = () => {
-        const elem = document.querySelector("#master-piece .title")
-        // console.log(elem)
-        elem ? (() => {
-            console.log(h)
-            const h = elem.clientHeight
-            window.scrollY >= (h + 50) ? setmasterPiece(true) : setmasterPiece(false)
-            console.log(h)
-        }) : console.log("byugby")
-    }
-
-    useEffect(() => {
-        // animateWedding()
-        // animateMaterPiece()
-    }, [])
-
-    window.addEventListener('scroll', () => {
-        // animateWedding()
-        // animateMaterPiece()
-    })
     return (
         <div id='master-piece' className='w-full overflow-auto py-16 bg-[#e0e5e5]'>
             <div className="title text-center text-[#000000]">

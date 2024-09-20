@@ -21,15 +21,21 @@ const HeroSection = () => {
 
     const slideLeft = () => {
         const slider = document.querySelector("#hero-section .slider")
-        slider && slideNo >= 0 && slideNo<3 ? (() => {
-            slider.style.transform = `translateX(-${25 * (slideNo + 1)}%)`
+        slider && slideNo >= 0 && slideNo < 3 ? (() => {
+           
+            const w0 = slider.querySelectorAll("img")[0].clientWidth
+            const w1 = slider.querySelectorAll("img")[1].clientWidth + w0
+            const w2 = slider.querySelectorAll("img")[2].clientWidth + w1
+            const w3 = slider.querySelectorAll("img")[3].clientWidth + w2
+            const w  = [w0 , w1 ,w2 , w3]
+            slider.style.transform = `translateX(-${w[slideNo]}px)`
             setslideNo(slideNo + 1)
         })() : ""
     }
 
     const slideRight = () => {
         const slider = document.querySelector("#hero-section .slider")
-        slider && slideNo > 0 && slideNo<=3 ? (() => {
+        slider && slideNo > 0 && slideNo <= 3 ? (() => {
             slider.style.transform = `translateX(-${25 * (slideNo - 1)}%)`
             setslideNo(slideNo - 1)
         })() : ""
@@ -45,10 +51,10 @@ const HeroSection = () => {
         <section id='hero-section' className='z-0 relative overflow-hidden w-full' style={{ height: `${window.innerHeight}px` }}>
             <div className={`bgImg relative overflow-hidden w-full h-full opacity-0`}>
                 <div className="slider w-[400%] h-full flex justify-center items-center transition-all duration-700 ease-in-out">
-                    <img src="/wedding.jpeg" alt="" className='md:w-1/4 md:h-auto h-full  object-cover ' />
-                    <img src="/wedding5.jpeg" alt="" className='md:w-1/4 md:h-auto h-full  object-cover ' />
-                    <img src="/wedding3.jpeg" alt="" className='md:w-1/4 md:h-auto h-full  object-cover ' />
-                    <img src="/wedding4.jpeg" alt="" className='md:w-1/4 md:h-auto h-full  object-cover ' />
+                    <img src="/wedding.jpeg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
+                    <img src="/wedding5.jpeg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
+                    <img src="/wedding3.jpeg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
+                    <img src="/wedding4.jpeg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
                 </div>
             </div>
 

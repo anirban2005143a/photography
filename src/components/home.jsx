@@ -18,19 +18,12 @@ const home = () => {
             const h1 = masterPiece.clientHeight
             const part1H = wedding.querySelector(".part1").clientHeight
             window.scrollY >= (h1 + 250) ? setisWeddingVisible(true) : setisWeddingVisible(false)
-            window.scrollY >= (h1 + part1H + 120) ? setweddingPart2(true) : setweddingPart2(false)
+            window.scrollY >= (h1 + part1H + 100) ? setweddingPart2(true) : setweddingPart2(false)
         })() : ""
     }
 
     const animateMaterPiece = () => {
-        // const elem = document.querySelector("#master-piece .title")
-        // console.log(elem)
-        // elem ? (() => {
-            // console.log(h)
-            // const h = elem.clientHeight
-            window.scrollY >= (50 + 50) ? setmasterPiece(true) : setmasterPiece(false)
-            // console.log(h)
-        // }) : console.log(h)
+        window.scrollY >= (50 + 50) ? setmasterPiece(true) : setmasterPiece(false)
     }
 
     useEffect(() => {

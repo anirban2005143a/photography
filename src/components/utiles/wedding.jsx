@@ -10,7 +10,7 @@ const Wedding = (props) => {
                     <p className={`${props.isWeddingVisible ? " opacity-100 translate-x-0 " : " opacity-0 -translate-x-24 "} transition-all duration-700 ease-in-out playfair-display-font md:text-[5rem] text-[4rem] uppercase md:text-start text-center`}>couple</p>
                     <p className={`${props.isWeddingVisible ? " opacity-100 translate-x-0 " : " opacity-0 -translate-x-24 "} transition-all duration-[1200ms] ease-in-outtext-xl dancing-script-font md:text-start text-center font-extrabold`}>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe totam vero animi rerum molestias tenetur reprehenderit. Odit consectetur sapiente, quisquam quod rerum atque in aliquid magnam veniam iste ea natus?"</p>
                 </div>
-                <div className={`img ${props.isWeddingVisible ? " opacity-100 translate-y-0 " : " opacity-0 -translate-y-36 "} transition-all duration-[1200ms] ease-in-out md:w-5/12 sm:w-8/12 w-full my-6`}>
+                <div className={`img ${props.isWeddingVisible ? " opacity-100 md:translate-y-0 translate-x-0 " : " opacity-0 md:-translate-y-36 md:translate-x-0 translate-x-36 "} transition-all duration-[1200ms] ease-in-out md:w-5/12 sm:w-8/12 w-full my-6`}>
                     <img src="/wedding7.jpeg" className=' bg-[#A1D6B2] w-full mx-auto ' alt="" />
                 </div>
             </div>
