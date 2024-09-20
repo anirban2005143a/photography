@@ -6,26 +6,41 @@ import Navbar from './navbar'
 
 const home = () => {
 
+    const [masterPiece, setmasterPiece] = useState(false)
     const [isWeddingVisible, setisWeddingVisible] = useState(false)
+    const [weddingPart2, setweddingPart2] = useState(false)
 
-    const changeOpacity = () => {
+    const animateWedding = () => {
         const masterPiece = document.querySelector("#homePage #master-piece")
         const wedding = document.querySelector("#homePage #wedding")
 
         masterPiece && wedding ? (() => {
-
             const h1 = masterPiece.clientHeight
-            const h2 = wedding.clientHeight
-            window.scrollY >= (h1 + 20) ? setisWeddingVisible(true) : setisWeddingVisible(false)
+            const part1H = wedding.querySelector(".part1").clientHeight
+            window.scrollY >= (h1 + 250) ? setisWeddingVisible(true) : setisWeddingVisible(false)
+            window.scrollY >= (h1 + part1H + 120) ? setweddingPart2(true) : setweddingPart2(false)
         })() : ""
     }
 
+    const animateMaterPiece = () => {
+        // const elem = document.querySelector("#master-piece .title")
+        // console.log(elem)
+        // elem ? (() => {
+            // console.log(h)
+            // const h = elem.clientHeight
+            window.scrollY >= (50 + 50) ? setmasterPiece(true) : setmasterPiece(false)
+            // console.log(h)
+        // }) : console.log(h)
+    }
+
     useEffect(() => {
-        changeOpacity()
+        animateWedding()
+        animateMaterPiece()
     }, [])
 
-    window.addEventListener('scroll' , ()=>{
-        changeOpacity()
+    window.addEventListener('scroll', () => {
+        animateWedding()
+        animateMaterPiece()
     })
 
 
@@ -34,9 +49,9 @@ const home = () => {
             <div id='homePage' className=' '>
                 <Navbar />
                 <HeroSection />
-                <MasterPiece />
+                <MasterPiece masterPiece={masterPiece} />
 
-                <Wedding isWeddingVisible={isWeddingVisible} />
+                <Wedding isWeddingVisible={isWeddingVisible} weddingPart2={weddingPart2} />
 
 
                 {/* {isWeddingVisible && <section id='cenematic-shot' className='my-32 relative'>
