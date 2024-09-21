@@ -40,7 +40,7 @@ const CinematicFlim = () => {
               </div>
             </div>
             <div className=' videoCard relative md:w-[45%] w-full m-2 overflow-hidden cursor-pointer'>
-              <video src="/public/1.mp4" className=' w-full h-auto object-center object-cover z-0 ' style={{ aspectRatio: "16/9" }} autoPlay loop muted></video>
+              <video src="/1.mp4" className=' w-full h-auto object-center object-cover z-0 ' style={{ aspectRatio: "16/9" }} autoPlay loop muted></video>
              <div className="category absolute w-full h-full top-0 left-0 flex justify-start items-end bg-top" style={{backgroundImage : "linear-gradient(to top , black 0% , transparent)" , backgroundSize : "100% 150%"}}>
               <p className=' capitalize cormorant-garamond-font font-semibold px-5 py-3 text-4xl text-white z-[10]'> Nature</p>
              </div>
@@ -49,7 +49,7 @@ const CinematicFlim = () => {
               </div>
             </div>
             <div className=' videoCard relative md:w-[45%] w-full m-2 overflow-hidden cursor-pointer'>
-              <video src="/public/product.mp4" className=' w-full h-auto object-center object-cover z-0 ' style={{ aspectRatio: "16/9" }} autoPlay loop muted></video>
+              <video src="/product.mp4" className=' w-full h-auto object-center object-cover z-0 ' style={{ aspectRatio: "16/9" }} autoPlay loop muted></video>
               <div className="category absolute w-full h-full top-0 left-0 flex justify-start items-end bg-top" style={{backgroundImage : "linear-gradient(to top , black 0% , transparent)" , backgroundSize : "100% 150%"}}>
                 <p className=' capitalize cormorant-garamond-font font-semibold px-5 py-3 text-4xl text-white z-[10]'> Product</p>
               </div>
@@ -58,7 +58,7 @@ const CinematicFlim = () => {
               </div>
             </div>
             <div className=' videoCard relative md:w-[45%] w-full m-2 overflow-hidden cursor-pointer'>
-              <video src="/public/party.mp4" className=' w-full h-auto object-center object-cover z-0 ' style={{ aspectRatio: "16/9" }} autoPlay loop muted></video>
+              <video src="/party.mp4" className=' w-full h-auto object-center object-cover z-0 ' style={{ aspectRatio: "16/9" }} autoPlay loop muted></video>
               <div className="category absolute w-full h-full top-0 left-0 flex justify-start items-end bg-top" style={{backgroundImage : "linear-gradient(to top , black 0% , transparent)" , backgroundSize : "100% 150%"}}>
                 <p className=' capitalize cormorant-garamond-font font-semibold px-5 py-3 text-4xl text-white z-[10]'> Party</p>
               </div>
