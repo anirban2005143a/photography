@@ -4,7 +4,7 @@ import '../../index.css'
 const WeddingStory = (props) => {
 
     const scaleUpImg = () => {
-        const storyCards = Array.from(document.querySelectorAll("#WeddingStory .storyCard"))
+        const storyCards = Array.from(document.querySelectorAll("#weddingStory .storyCard"))
         storyCards.forEach((item) => {
             item.addEventListener("mouseover", () => {
                 item.querySelector("img").classList.add("scale-110")

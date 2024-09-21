@@ -83,9 +83,9 @@ console.log(bgVideo)
                 <Wedding isWeddingVisible={isWeddingVisible} weddingPart2={weddingPart2} />
                 <WeddingStory weddingStory={weddingStory} />
                 {bgVideo && <div className="fixedVideo z-[-1] fixed top-0 left-0 w-full h-full overflow-hidden">
-                    <video src="/weddingVid.mp4" className=' object-cover md:w-full w-auto md:h-[100vh] object-center' autoPlay={bgVideo} loop ></video>
+                    <video src="/weddingVid.mp4" className=' object-cover md:w-full w-auto h-[100vh] object-center' autoPlay loop muted></video>
                 </div>}
-                <div className="bgvideoDisplay md:h-[75vh] bg-transparent "></div>
+                <div className="bgvideoDisplay md:h-[80vh] h-[60vh] bg-transparent "></div>
                 <CinematicFlim/>
                
 
