@@ -4,7 +4,7 @@ const Wedding = (props) => {
 
 
     return (
-        <div id='wedding' className={` transition-all duration-200 ease-in-out overflow-hidden bg-[#FEFAE0] `}>
+        <section id='wedding' className={` transition-all duration-200 ease-in-out overflow-hidden bg-[#FEFAE0] `}>
             <div className="part1 flex md:flex-row flex-col justify-between md:p-4 p-2 py-6 items-center ">
                 <div className={`quote md:w-6/12 sm:w-10/12 w-full md:mx-6 sm:mx-3 mx-0 text-black  `}>
                     <p className={`${props.isWeddingVisible ? " opacity-100 translate-x-0 " : " opacity-0 -translate-x-24 "} transition-all duration-700 ease-in-out playfair-display-font md:text-[5rem] text-[4rem] uppercase md:text-start text-center`}>couple</p>
@@ -26,7 +26,7 @@ const Wedding = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

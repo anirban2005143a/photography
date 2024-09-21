@@ -10,7 +10,7 @@ const MasterPiece = (props) => {
                 <span className='border-b-[1px] border-black font-semibold text-5xl uppercase cormorant-garamond-font'>masterpiece</span> 
                 <p className=' md:w-7/12 sm:w-9/12 w-11/12 mx-auto dancing-script-font my-6 text-lg'>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ullam nemo deserunt iusto fugit totam suscipit harum debitis minus sit cupiditate corporis laborum consequuntur veniam assumenda! Tempore est quo nesciunt!"</p>
             </div>
-            <div className="gallery max-w-[650px] mx-auto translate-x-0 px-4">
+            <div className="gallery max-w-[650px] mx-auto translate-x-0 px-4 overflow-hidden">
                 <div className={`row1 ${props.masterPiece ? " translate-x-2.5 opacity-100 " : " -translate-x-40 opacity-0 "} w-full flex justify-center items-end transition-all duration-700 ease-in-out delay-0`}>
                     <div className="col1 img relative translate-y-0">
                         <img src="/a/boliviainteligente-2XVqBh3sXgY-unsplash.jpg" alt="" className='' />

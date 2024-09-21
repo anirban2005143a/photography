@@ -4,12 +4,20 @@ import HeroSection from './utiles/HeroSection'
 import MasterPiece from './utiles/marterPiece'
 import Navbar from './navbar'
 import WeddingStory from './utiles/WeddingStory'
+import CinematicFlim from './utiles/CinematicFlim'
 
 const home = () => {
 
     const [masterPiece, setmasterPiece] = useState(false)
     const [isWeddingVisible, setisWeddingVisible] = useState(false)
     const [weddingPart2, setweddingPart2] = useState(false)
+    const [weddingStory, setweddingStory] = useState(false)
+    const [bgVideo, setbgVideo] = useState(false)
+
+    const animateMaterPiece = () => {
+        window.scrollY >= (50 + 50) ? setmasterPiece(true) : setmasterPiece(false)
+    }
+
 
     const animateWedding = () => {
         const masterPiece = document.querySelector("#homePage #master-piece")
@@ -23,21 +31,49 @@ const home = () => {
         })() : ""
     }
 
-    const animateMaterPiece = () => {
-        window.scrollY >= (50 + 50) ? setmasterPiece(true) : setmasterPiece(false)
+
+    const animateWeddingStory = () => {
+        const masterPiece = document.querySelector("#homePage #master-piece")
+        const wedding = document.querySelector("#homePage #wedding")
+
+        masterPiece && wedding ? (() => {
+            const h1 = masterPiece.clientHeight
+            const h2 = wedding.clientHeight
+
+            window.scrollY >= (h1 + h2 + 180) ? setweddingStory(true) : setweddingStory(false)
+        })() : ""
+    }
+
+    const isBgVideo = ()=>{
+        const masterPiece = document.querySelector("#homePage #master-piece")
+        const wedding = document.querySelector("#homePage #wedding")
+        const weddingStory = document.querySelector("#homePage #weddingStory")
+
+       
+
+        masterPiece && wedding && weddingStory ? (()=>{
+            const h1 = masterPiece.clientHeight
+            const h2 = wedding.clientHeight
+            const h3 = weddingStory.clientHeight
+            window.scrollY >= (h1+h2) ? setbgVideo(true) : setbgVideo (false) 
+        })() : ""
     }
 
     useEffect(() => {
         animateWedding()
         animateMaterPiece()
+        animateWeddingStory()
+        isBgVideo()
     }, [])
 
     window.addEventListener('scroll', () => {
         animateWedding()
         animateMaterPiece()
+        animateWeddingStory()
+        isBgVideo()
     })
 
-
+console.log(bgVideo)
     return (
         <>
             <div id='homePage' className=' '>
@@ -45,32 +81,15 @@ const home = () => {
                 <HeroSection />
                 <MasterPiece masterPiece={masterPiece} />
                 <Wedding isWeddingVisible={isWeddingVisible} weddingPart2={weddingPart2} />
-                <WeddingStory/>
+                <WeddingStory weddingStory={weddingStory} />
+                {bgVideo && <div className="fixedVideo z-[-1] fixed top-0 left-0 w-full h-full overflow-hidden">
+                    <video src="/weddingVid.mp4" className=' object-cover md:w-full w-auto md:h-[100vh] object-center' autoPlay={bgVideo} loop ></video>
+                </div>}
+                <div className="bgvideoDisplay md:h-[75vh] bg-transparent "></div>
+                <CinematicFlim/>
+               
 
-                {/* {isWeddingVisible && <section id='cenematic-shot' className='my-32 relative'>
-                    <div className="title w-10/12 mx-auto  text-center">
-                        <p className=' uppercase text-7xl raleway-font'>cinematic videos</p>
-                        <div className='content font-sans text-white text-center font-thin py-12 text-lg'>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam quisquam praesentium voluptate eligendi voluptates ratione minus consectetur, reiciendis sed molestias nam dignissimos autem vitae minima, quaerat ut ipsam aut? Quod.
-                        </div>
-                    </div>
-                    <div id="videos" className=' relative -mt-24 px-10'>
-                        <div className=" my-28 flex justify-between items-center ">
-                            <div className="video relative w-5/12">
-                                <video className=' rounded-lg' src="/1.mp4" autoPlay loop muted></video>
-                            </div>
-                            <div className=" w-6/12 content text-3xl font-thin font-sans text-orange-50 abril-fatface-regular" style={{ letterSpacing: "1px" }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet earum eum sit, iste neque esse </div>
-                        </div>
-                        <div className=" my-28 flex flex-row-reverse justify-between items-center ">
-                            <div className="video relative w-5/12">
-                                <video className=' rounded-lg' src="/1.mp4" autoPlay loop muted></video>
-                            </div>
-                            <div className=" w-6/12 content text-3xl font-thin font-sans text-orange-50 abril-fatface-regular" style={{ letterSpacing: "1px" }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet earum eum sit, iste neque esse </div>
-                        </div>
-                    </div>
-                </section>}
-
-                {isWeddingVisible && <section id='public' className=' mb-10'>
+                {/* {isWeddingVisible && <section id='public' className=' mb-10'>
                     <div className="images flex justify-center ">
                         <div className="image w-52 h-64  -rotate-12"><img className=' w-full h-full object-cover border-2 border-slate-600 rounded-md' src="/bg3.jpg" alt="" /></div>
                         <div className="image w-52 h-64  rotate-12 translate-y-4"><img className=' w-full h-full object-cover border-2 border-slate-600 rounded-md' src="/bg2.avif" alt="" /></div>
