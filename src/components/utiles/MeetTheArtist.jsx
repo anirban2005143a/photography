@@ -3,7 +3,7 @@ import '../../index.css'
 
 const MeetTheArtist = () => {
   return (
-    <div id='meetTheArtist' className=' bg-[#BB9AB1] py-24'>
+    <div id='meetTheArtist' className=' bg-[#D2E0FB] py-24'>
         <div className='flex md:flex-row flex-col-reverse justify-center items-center md:w-7/12 mx-auto'>
             <div className="img md:w-1/3 sm:mx-4 mx-2 my-10"><img src="/a/seb-dean-yOSEqRsOAnE-unsplash.jpg" alt="" className=' w-full object-cover object-center' style={{aspectRatio:"1/1"}} /></div>
             <div className="content md:w-2/3 ">
