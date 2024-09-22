@@ -16,7 +16,7 @@ const home = () => {
     const [bgVideo, setbgVideo] = useState(false)
 
     const animateMaterPiece = () => {
-        window.scrollY >= (50 + 50) ? setmasterPiece(true) : setmasterPiece(false)
+        window.scrollY >= 150 ? setmasterPiece(true) : setmasterPiece(false)
     }
 
 
@@ -31,7 +31,6 @@ const home = () => {
             window.scrollY >= (h1 + part1H + 100) ? setweddingPart2(true) : setweddingPart2(false)
         })() : ""
     }
-
 
     const animateWeddingStory = () => {
         const masterPiece = document.querySelector("#homePage #master-piece")
@@ -49,14 +48,15 @@ const home = () => {
         const masterPiece = document.querySelector("#homePage #master-piece")
         const wedding = document.querySelector("#homePage #wedding")
         const weddingStory = document.querySelector("#homePage #weddingStory")
+        const flim = document.querySelector("#cinematicFlim")
 
-       
-
-        masterPiece && wedding && weddingStory ? (()=>{
+        masterPiece && wedding && weddingStory && flim ? (()=>{
             const h1 = masterPiece.clientHeight
             const h2 = wedding.clientHeight
             const h3 = weddingStory.clientHeight
-            window.scrollY >= (h1+h2) ? setbgVideo(true) : setbgVideo (false) 
+            const top = flim.getBoundingClientRect().top
+            window.scrollY > (h1+h2)? setbgVideo(true) : setbgVideo (false) 
+            top <=0 ? setbgVideo(false) : ""
         })() : ""
     }
 
@@ -74,7 +74,6 @@ const home = () => {
         isBgVideo()
     })
 
-console.log(bgVideo)
     return (
         <>
             <div id='homePage' className=' '>

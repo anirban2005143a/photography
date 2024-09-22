@@ -11,7 +11,7 @@ const MasterPiece = (props) => {
                 <p className=' md:w-7/12 sm:w-9/12 w-10/12 mx-auto dancing-script-font my-6 text-lg text-center'>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ullam nemo deserunt iusto fugit totam suscipit harum debitis minus sit cupiditate corporis laborum consequuntur veniam assumenda! Tempore est quo nesciunt!"</p>
             </div>
 
-            <div className='gallery w-full md:p-2 p-[2px] '>
+            <div className={`gallery w-full md:p-2 p-[2px] ${props.masterPiece ? " opacity-100 " : " opacity-100 "} transition-all duration-1000 ease-in-out`}>
                 <div className="row  flex md:flex-row flex-col ">
                     <div className="col flex md:flex-col flex-row md:w-2/3 sm:m-1 m-[1px] ">
                         <div className="row md:h-full  md:p-0 p-[2px] sm:border-0 border-black sm:my-1 m-[1px]"><img src="/a/alex-shuper-5DU0Wlm41Zw-unsplash.jpg" alt="" className=' h-full object-cover cursor-pointer object-center'/></div>
