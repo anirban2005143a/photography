@@ -5,27 +5,30 @@ const MasterPiece = (props) => {
 
 
     return (
-        <div id='master-piece' className='w-full overflow-auto py-16 bg-[#e0e5e5]'>
-            <div className="title text-center text-[#000000]">
-                <span className='border-b-[1px] border-black font-semibold text-5xl uppercase cormorant-garamond-font'>masterpiece</span> 
-                <p className=' md:w-7/12 sm:w-9/12 w-11/12 mx-auto dancing-script-font my-6 text-lg'>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ullam nemo deserunt iusto fugit totam suscipit harum debitis minus sit cupiditate corporis laborum consequuntur veniam assumenda! Tempore est quo nesciunt!"</p>
+        <div id='master-piece' className='w-full overflow-auto py-16 bg-[#D2E0FB]'>
+            <div className="title text-[#000000] ">
+                <p className='border-b-[1px] border-black font-semibold text-4xl uppercase cormorant-garamond-font mx-6 text-center'>masterpiece gallery</p> 
+                <p className=' md:w-7/12 sm:w-9/12 w-10/12 mx-auto dancing-script-font my-6 text-lg text-center'>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ullam nemo deserunt iusto fugit totam suscipit harum debitis minus sit cupiditate corporis laborum consequuntur veniam assumenda! Tempore est quo nesciunt!"</p>
             </div>
-            <div className="gallery max-w-[650px] mx-auto translate-x-0 px-4 overflow-hidden">
-                <div className={`row1 ${props.masterPiece ? " translate-x-2.5 opacity-100 " : " -translate-x-40 opacity-0 "} w-full flex justify-center items-end transition-all duration-700 ease-in-out delay-0`}>
-                    <div className="col1 img relative translate-y-0">
-                        <img src="/a/boliviainteligente-2XVqBh3sXgY-unsplash.jpg" alt="" className='' />
+
+            <div className='gallery w-full md:p-2 p-[2px]'>
+                <div className="row  flex md:flex-row flex-col ">
+                    <div className="col flex flex-col md:w-2/3  m-1">
+                        <div className="row md:h-full p-2 border-2 border-black my-1"><img src="/a/alex-shuper-5DU0Wlm41Zw-unsplash.jpg" alt="" className='w-full h-full object-cover cursor-pointer object-center'/></div>
+                        <div className="row md:h-full p-2 border-2 border-black my-1"><img src="/a/boliviainteligente-G-pd6z_ZdSw-unsplash.jpg" alt="" className='w-full h-full object-cover cursor-pointer object-center'/></div>
                     </div>
-                    <div className="col2 imgbw  p-1">
-                        <img src="/a/colin-watts-_rt4VIG9rDQ-unsplash.jpg" alt="" className='' />
+                    <div className="col flex flex-col md:w-1/3  m-1">
+                        <div className="row p-2 border-2 border-black my-1"><video src="/fashion.mp4" className=' w-full object-cover cursor-pointer object-center' autoPlay={true} loop muted style={{aspectRatio:"4/6"}}></video></div>
+                        <div className="row md:h-full p-2 border-2 border-black my-1"><img src="/a/clark-van-der-beken-Tk0B3Dfkf_4-unsplash.jpg" alt="" className=' w-full h-full object-cover cursor-pointer object-center' /></div>
                     </div>
                 </div>
-                <div className={`row2 ${props.masterPiece ? " -translate-x-2.5 opacity-100 " : " translate-x-40 opacity-0 "} w-full flex justify-center items-start transition-all duration-700 ease-in-out delay-200`}>
-                    <div className="col1 imgbw relative">
-                        <img src="/a/alex-shuper-5DU0Wlm41Zw-unsplash.jpg" alt="" className='' />
-                    </div>
-                    <div className="col2 img -translate-y-6 p-1">
-                        <img src="/a/arthur-arias-QAZCk9QzOrU-unsplash.jpg" alt="" className='' />
-                    </div>
+                <div className="row  flex md:flex-row flex-col">
+                    <div className="col md:w-3/5  p-2 border-2 border-black m-1"><video src="/1.mp4" className='w-full object-cover cursor-pointer object-center' autoPlay={true} loop muted style={{aspectRatio:"16/9"}}></video></div>
+                    <div className="col md:w-2/5  md:h-full p-2 border-2 border-black m-1"><img src="/a/jakub-neskora-Qeyljff0tkA-unsplash.jpg"  alt=""  className='w-full h-full object-cover cursor-pointer object-center'  style={{aspectRatio:"32/27"}} /></div>
+                </div>
+                <div className="row  flex md:flex-row flex-col">
+                    <div className="col md:w-5/1  p-2 border-2 border-black m-1"><img src="/a/pexels-pixabay-268533.jpg" alt="" className=' object-center object-cover cursor-pointer w-full' style={{aspectRatio:"1/1"}} /></div>
+                    <div className="col md:w-7/1  p-2 border-2 border-black m-1"><video src="/product.mp4" className=' w-full object-cover cursor-pointer object-center' autoPlay={true} loop muted  style={{aspectRatio:"7/5"}}></video></div>
                 </div>
             </div>
         </div>

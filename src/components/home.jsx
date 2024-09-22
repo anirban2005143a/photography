@@ -5,6 +5,7 @@ import MasterPiece from './utiles/marterPiece'
 import Navbar from './navbar'
 import WeddingStory from './utiles/WeddingStory'
 import CinematicFlim from './utiles/CinematicFlim'
+import MeetTheArtist from './utiles/MeetTheArtist'
 
 const home = () => {
 
@@ -87,7 +88,7 @@ console.log(bgVideo)
                 </div>}
                 <div className="bgvideoDisplay md:h-[80vh] h-[60vh] bg-transparent "></div>
                 <CinematicFlim/>
-               
+                    <MeetTheArtist/>
 
                 {/* {isWeddingVisible && <section id='public' className=' mb-10'>
                     <div className="images flex justify-center ">
