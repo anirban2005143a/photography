@@ -44,19 +44,19 @@ const home = () => {
         })() : ""
     }
 
-    const isBgVideo = ()=>{
+    const isBgVideo = () => {
         const masterPiece = document.querySelector("#homePage #master-piece")
         const wedding = document.querySelector("#homePage #wedding")
         const weddingStory = document.querySelector("#homePage #weddingStory")
         const flim = document.querySelector("#cinematicFlim")
 
-        masterPiece && wedding && weddingStory && flim ? (()=>{
+        masterPiece && wedding && weddingStory && flim ? (() => {
             const h1 = masterPiece.clientHeight
             const h2 = wedding.clientHeight
             const h3 = weddingStory.clientHeight
             const top = flim.getBoundingClientRect().top
-            window.scrollY > (h1+h2)? setbgVideo(true) : setbgVideo (false) 
-            top <=0 ? setbgVideo(false) : ""
+            window.scrollY > (h1 + h2) ? setbgVideo(true) : setbgVideo(false)
+            top <= 0 ? setbgVideo(false) : ""
         })() : ""
     }
 
@@ -78,18 +78,18 @@ const home = () => {
 
     return (
         <>
-            <div id='homePage' className=' '>
+            <div id='homePage' className=' relative'>
                 <Navbar />
                 <HeroSection />
                 <MasterPiece masterPiece={masterPiece} />
                 <Wedding isWeddingVisible={isWeddingVisible} weddingPart2={weddingPart2} />
                 <WeddingStory weddingStory={weddingStory} />
-                {bgVideo && <div className="fixedVideo z-[-1] fixed top-0 left-0 w-full h-full overflow-hidden">
-                    <video src="/weddingVid.mp4" className=' object-cover md:w-full w-auto h-[100vh] object-center' autoPlay loop muted></video>
+                {bgVideo && <div className="fixedVideo z-[-1] fixed top-0 left-0 w-full h-[100vh] overflow-hidden">
+                    <video src="/weddingVid.mp4" className=' object-cover md:w-full w-auto h-full object-center' autoPlay loop muted></video>
                 </div>}
                 <div className="bgvideoDisplay md:h-[80vh] h-[60vh] bg-transparent "></div>
-                <CinematicFlim/>
-                    <MeetTheArtist/>
+                <CinematicFlim />
+                <MeetTheArtist />
 
                 {/* {isWeddingVisible && <section id='public' className=' mb-10'>
                     <div className="images flex justify-center ">
