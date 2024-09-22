@@ -41,7 +41,7 @@ const home = () => {
             const h1 = masterPiece.clientHeight
             const h2 = wedding.clientHeight
 
-            window.scrollY >= (h1 + h2 + 180) ? setweddingStory(true) : setweddingStory(false)
+            window.scrollY >= (h1 + h2 + 150) ? setweddingStory(true) : setweddingStory(false)
         })() : ""
     }
 
