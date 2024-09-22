@@ -8,6 +8,10 @@
   margin: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .dosis-font {
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;

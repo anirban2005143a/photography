@@ -74,6 +74,8 @@ const home = () => {
         isBgVideo()
     })
 
+    console.log(bgVideo)
+
     return (
         <>
             <div id='homePage' className=' '>

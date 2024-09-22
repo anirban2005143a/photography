@@ -46,7 +46,7 @@ const HeroSection = () => {
     }, [])
 
     return (
-        <section id='hero-section' className='z-0 relative overflow-hidden w-full' style={{ height: `${window.innerHeight}px` }}>
+        <section id='hero-section' className='z-0 relative overflow-hidden w-full min-h-[450px]' style={{ height: `${window.innerHeight}px` }}>
             <div className={`bgImg relative overflow-hidden w-full h-full opacity-0`}>
                 <div className="slider w-[400%] h-full flex justify-center items-center transition-all duration-700 ease-in-out">
                     <img src="/wedding.jpeg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
