@@ -47,7 +47,7 @@ const HeroSection = () => {
     }, [])
 
     return (
-        <section id='hero-section' className='z-0 relative overflow-hidden w-full min-h-[450px]' style={{ height: `${window.innerHeight}px` }}>
+        <section id='hero-section' className='z-0 relative overflow-hidden w-full min-h-[500px]' style={{ height: `${window.innerHeight}px` }}>
             
             <Navbar/>
             
