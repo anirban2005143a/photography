@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import herobg from '/wedding.jpeg'
 import '../../index.css'
 import Navbar from '../navbar'
 
@@ -53,10 +52,10 @@ const HeroSection = () => {
             
             <div className={`bgImg relative overflow-hidden w-full h-full opacity-0`}>
                 <div className="slider w-[400%] h-full flex justify-center items-center transition-all duration-700 ease-in-out">
-                    <img src="/wedding.jpeg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
-                    <img src="/wedding5.jpeg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
-                    <img src="/wedding3.jpeg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
-                    <img src="/wedding4.jpeg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
+                    <img src="/wedding.jpg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
+                    <img src="/wedding5.jpg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
+                    <img src="/wedding3.jpg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
+                    <img src="/wedding4.jpg" alt="" className='w-1/4 md:h-auto h-full object-center object-cover ' />
                 </div>
             </div>
 
